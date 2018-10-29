@@ -1,0 +1,14 @@
+/* You can add that-> this.toggle = this.toggle.bind(this);
+to AppNavbar class, example: 
+class AppNavbar extends Component {
+  constructor(props){
+	super(props);
+
+	this.toggle = this.toggle.bind(this);
+  }
+  and use custom toggle function after that 
+  toggle() {
+
+  }
+}
+*/
