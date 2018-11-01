@@ -1,4 +1,4 @@
-# Shopping List Application V.1.2 (In development)
+# Shopping List Application V.1.2.0 (In development)
 
 ## Things Ready:
 
@@ -12,9 +12,10 @@ Reducers: index & itemReducer
 
 ### Server side:
 
-API routes for items.js,
+Schema for Item.js, User.js, Profile.js
+API routes for items.js, profile.js, users.js.
+Validations for is-empty.js, login.js, register.js, profile.js.
 Configurations for Item-DB keys.js,
-Schema for Item.js,
 Connections to MongoDB
 
 ## Tings to Do:
@@ -26,11 +27,10 @@ New theme & UI to whole App.
 
 ### Server side:
 
-API routes for posts.js, profile.js, users.js.
-Validations for is-empty.js, login.js, register.js.
-Models for User.js
+API routes for posts.js.
+Validations for post.js.
 
-Updates to: server.js, Configurations for keys.js (secretOrKey) & passport.js
+Updates to: server.js, Configurations for keys.js (secretOrKey)
 
 ### Stack:
 
