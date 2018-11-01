@@ -1,4 +1,4 @@
-# Shopping List Application V.1.0 (In development)
+# Shopping List Application V.1.2 (In development)
 
 ## Things Ready:
 
