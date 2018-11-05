@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
-  Button, 
-  Modal, 
-  ModalHeader, 
-  ModalBody, 
-  Form, 
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Form,
   FormGroup,
   Label,
   Input
-} from 'reactstrap';
-import { connect } from 'react-redux';
-import { addItem } from '../actions/itemActions';
+} from "reactstrap";
+import { connect } from "react-redux";
+import { addItem } from "../actions/itemActions";
 
 class ItemModal extends Component {
   state = {
     modal: false,
-    name: ''
+    name: ""
   };
 
   toggle = () => {
@@ -24,8 +24,8 @@ class ItemModal extends Component {
     });
   };
 
-  onCng = (e) => {
-  	this.setState({ [e.target.name]: e.target.value });
+  onCng = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   onSubmit = e => {
@@ -42,20 +42,17 @@ class ItemModal extends Component {
   };
 
   render() {
-    return(
+    return (
       <div>
         <Button
           color="dark"
-          style={{marginBottom: '2rem'}}
+          style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
         >
           Add Item
         </Button>
 
-        <Modal
-          isOpen={this.state.modal}
-          toggle={this.toggle}
-        >
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Add To Shopping List</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.onSubmit}>
@@ -68,11 +65,7 @@ class ItemModal extends Component {
                   placeholder="Add shopping item"
                   onChange={this.onCng}
                 />
-                <Button
-                  color="dark"
-                  style={{marginTop: '2rem'}}
-                  block
-                >
+                <Button color="dark" style={{ marginTop: "2rem" }} block>
                   Add Item
                 </Button>
               </FormGroup>
@@ -88,4 +81,7 @@ const mapStateToProps = state => ({
   item: state.item
 });
 
-export default connect(mapStateToProps, { addItem })(ItemModal);
+export default connect(
+  mapStateToProps,
+  { addItem }
+)(ItemModal);
