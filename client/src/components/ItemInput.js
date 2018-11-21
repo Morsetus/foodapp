@@ -4,9 +4,15 @@ import { connect } from "react-redux";
 import { addItem } from "../actions/itemActions";
 
 class ItemInput extends Component {
-  state = {
-    name: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: ""
+    };
+
+    this.onChange = this.onCng.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
 
   onCng = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -20,6 +26,7 @@ class ItemInput extends Component {
     };
     // Add item via addItem action
     this.props.addItem(newItem);
+    this.setState({ name: "" });
   };
 
   render() {
@@ -32,6 +39,7 @@ class ItemInput extends Component {
             name="name"
             id="item"
             placeholder="Write here"
+            value={this.state.name}
             onChange={this.onCng}
           />
           <InputGroupAddon addonType="append">

@@ -2,8 +2,8 @@ body {
   margin: 0;
   min-width: 250px;
   background: url("./img/supermarket.jpg") no-repeat;
-  background-size: cover;
-  /*height: 650px;*/
+  background-size: auto;
+  background-position: top;
   height: 100vh;
 }
 
@@ -13,19 +13,18 @@ h2 {
 }
 
 .area {
-  position: absolute;
-  /*position: fixed;*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: center;
   width: 350px;
-  height: auto;
-  /*height: 420px;*/
-  padding: 80px 40px;
+  padding: 60px 40px;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.8);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1;
 }
 
 .list_Header {
@@ -71,7 +70,6 @@ h2 {
   padding: 12px 8px 12px 40px;
   list-style-type: none;
   background: #eee;
-  /*font-size: 18px;*/
   transition: 0.2s;
 
   /* make the list items unselectable */
@@ -95,23 +93,16 @@ h2 {
 .lg-M li.checked {
   background: #888;
   color: #39ca74;
-  /*color: #fff;*/
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
 .lg-M li.checked::before {
   content: "";
-  /*content: '.circle';*/
   position: absolute;
   border-color: #39ca74;
-  /*border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;*/
   top: 10px;
   left: 16px;
-  /*border: solid #39ca74;
-  border-width: 0 0 4px 4px;*/
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
@@ -122,30 +113,9 @@ h2 {
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
-  /*margin-right: 0.5rem;*/
 }
 
 .remove-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
-
-/*
-.fade-enter {
-  opacity: 0.01;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 1000ms ease-in;
-}
-*/
